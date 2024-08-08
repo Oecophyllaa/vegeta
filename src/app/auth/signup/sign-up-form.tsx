@@ -44,12 +44,12 @@ function SignUpForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-[100%]">
       <div className="w-[100%] text-3xl font-semibold tracking-widest mb-2 text-center">Buat akun baru</div>
-      <Input className="w-[100%] p-4 rounded-sm mt-4" type="text" placeholder="Nama Lengkap" {...register("name")} error={errors.name?.message} />
+      <Input className="w-[100%] mt-4" type="text" placeholder="Nama Lengkap" {...register("name")} error={errors.name?.message} />
 
-      <Input className="w-[100%] p-4 rounded-sm mt-4" type="text" placeholder="Email" {...register("email")} error={errors.email?.message} />
+      <Input className="w-[100%] mt-4" type="text" placeholder="Email" {...register("email")} error={errors.email?.message} />
 
       <Input
-        className="w-[100%] p-4 rounded-sm mt-4"
+        className="w-[100%] mt-4"
         type={showPassword ? "text" : "password"}
         placeholder="Kata Sandi"
         suffix="Eye"
@@ -59,7 +59,7 @@ function SignUpForm() {
       />
 
       <Input
-        className="w-[100%] p-4 rounded-sm mt-4"
+        className="w-[100%] mt-4"
         type={showConfirmationPassword ? "text" : "password"}
         placeholder="Konfirmasi Kata Sandi"
         suffix="Eye"
